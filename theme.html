@@ -37,9 +37,6 @@
     </style>
     -->
 
-		<link rel="stylesheet" title="Tomorrow Night" href="http://highlightjs.org/static/styles/tomorrow-night.css">
-		<script src="http://highlightjs.org/static/highlight.pack.js"></script>
-
     {% if site.analytics %}
       <script>
       var _gaq = _gaq || [];
@@ -100,7 +97,7 @@
 
           {% if is_tag %}
           <div class="row">
-            <h4>Showing all posts tagged #{{ tag }}:</h4>
+            <h4>Visualizar todos os posts com a tag: #{{ tag }}:</h4>
             <hr />
           </div>
           {% endif %}
@@ -110,7 +107,7 @@
           <div class="row post">
             <div class="span6">
               <h2><a href="{{ post.permalink }}">{{ post.title }}</a></h2>
-              <p class="muted">Posted on {{ post.created_at|format_date }}</p>
+              <p class="muted">Postado em {{ post.created_at|format_date }}</p>
 
               <div class="post-content" data-type-cleanup="true">
                 {{ post.content }}
@@ -124,8 +121,8 @@
           {% if not is_tag %}
           {% if pagination %}
           <div class="pagination">
-            {% if pagination.prev %}<a href="{{ pagination.prev }}" class="post-prev">&larr; View Previous Posts</a>{% endif %}
-            {% if pagination.next %}<a href="{{ pagination.next }}" class="post-next">View More Posts &rarr;</a>{% endif %}
+            {% if pagination.prev %}<a href="{{ pagination.prev }}" class="post-prev">&larr; Anteriores</a>{% endif %}
+            {% if pagination.next %}<a href="{{ pagination.next }}" class="post-next">Próximos &rarr;</a>{% endif %}
           </div>
           {% endif %}
           {% endif %}
@@ -138,7 +135,7 @@
 
           <div class="post">
             <h1>{{ post.title }}</h1>
-            <p class="muted">Posted on {{ post.created_at|format_date }}</p>
+            <p class="muted">Postado em {{ post.created_at|format_date }}</p>
 
             <div class="post-content" data-type-cleanup="true">
               {{ post.content }}
@@ -179,7 +176,7 @@
 
           <div class="post">
             <h1>{{ link.title }}</h1>
-            <p class="muted">Posted on {{ link.created_at|format_date }}</p>
+            <p class="muted">Postado em {{ link.created_at|format_date }}</p>
             <div class="post-content" data-type-cleanup="true">
               {{ link.content }}
             </div>
@@ -311,11 +308,5 @@
     {{ footer_meta }}
 
     <script src="http://postach.io/static/themes/_assets/bootstrap/js/bootstrap.min.js" /></script>
-
-		<script>
-		 //Syntax Highlighter
-		 hljs.configure({tabReplace: '  '});
-		 hljs.initHighlightingOnLoad();
-		</script>
 </body>
 </html>
