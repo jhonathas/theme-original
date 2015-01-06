@@ -37,6 +37,9 @@
     </style>
     -->
 
+		<link rel="stylesheet" title="Tomorrow Night" href="http://highlightjs.org/static/styles/tomorrow-night.css">
+		<script src="http://highlightjs.org/static/highlight.pack.js"></script>
+
     {% if site.analytics %}
       <script>
       var _gaq = _gaq || [];
@@ -309,5 +312,10 @@
 
     <script src="http://postach.io/static/themes/_assets/bootstrap/js/bootstrap.min.js" /></script>
 
+		<script>
+		 //Syntax Highlighter
+		 hljs.configure({tabReplace: '  '});
+		 hljs.initHighlightingOnLoad();
+		</script>
 </body>
 </html>
